@@ -19,4 +19,4 @@ var Harry = "Harry"
 var harry = "harry"
 var haRRy = "haRRy"
 // that's why JavaScript is case Sensitive 
-// but don't do this because your code is should readable , this is your first priority
+// but don't do this because your code is should readable , that shoyld be your first priority
