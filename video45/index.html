@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>className & classList</title>
+    <style>
+        .yellow{
+            background-color: yellow;
+            color: black;
+        }
+        .red{
+            background-color: red;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="first" class="red">
+        <span>Hey I am good</span>
+    </div>
+    <script>
+        let first = document.getElementById("first")
+        first.className = "yellow red"
+        // first.classList.remove("yellow")  // yellow class is removed
+        // first.classList.add("yellow")
+        first.classList.toggle("red")  // it can remove if it exists and add when nothing exists
+        console.log(first.classList);  
+        console.log(first.classList.contains("blue"));   // output: false (not assinged)
+
+    </script>
+</body>
+</html>
