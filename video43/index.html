@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insertion Methods</title>
+  </head>
+  <body>
+    I am out of container(Outer)
+    <div class="container">
+      I am start of container(inner)
+
+      <div id="first">I am the first Element</div>
+      I am end of container(inner)
+    </div>
+    I am out of container(outer)
+    <script>
+      let a = document.getElementsByClassName("container")[0];
+
+      // below is older way to insert an Element to HTML
+      //   a.innerHTML = a.innerHTML + "<h1> Hello WOrld! </h1>";
+
+      // New Way
+
+    //   let num = 0;
+    //   for (let i = 0; i < 10; i++) {
+    // }
+    let div = document.createElement("div");
+    div.innerHTML = `<h1> Hello World!</h1>`;
+    // a.append(div);  // place it end of the container
+    // a.prepend(div);  // place it start of the container
+    // a.before(div);  // place it outside of the container at start
+    // a.after(div);  // place it outside of the container at end
+    // a.replaceWith(div);  
+    
+    </script>
+  </body>
+</html>
