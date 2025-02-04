@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Methods</title>
+</head>
+<body>
+    <div id="container" class="hi" data-game="mario" data-player="harry">
+        Hey I am div
+    </div>
+    <script>
+
+        let container = document.getElementById("container")
+        let a = container.getAttribute("class")
+        console.log(a);
+        console.log(container.hasAttribute("class")); 
+        console.log(container.hasAttribute("style"));
+
+        let b = container.setAttribute("style", "css")
+
+        // container.removeAttribute("style")
+        console.log(container.attributes);
+        console.log(container.dataset);
+        console.log(container.dataset.game);
+        console.log(container.dataset.player);
+
+    </script>
+</body>
+</html>
