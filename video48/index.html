@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addEventListner & removeEventListner</title>
+  </head>
+  <body>
+    <div class="container">
+      <button id="event">Click me</button>
+    </div>
+    <script>
+      let a = (e) => {
+        console.log(e);  // pointer events 
+        console.log(e.target);    // <button id="event">Click me</button>
+        alert("hello1");
+      };
+
+    //   let b = () => {
+    //     alert("hello2");
+    //   };
+
+      let c = document.getElementById("event");
+      c.addEventListener("click", a);
+    //   c.addEventListener('click', b)
+
+    //   c.removeEventListener('click', b)  // here handler must same as a function reference then removeEventListner works
+
+
+    </script>
+  </body>
+</html>
