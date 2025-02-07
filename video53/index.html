@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function goodmorning(error, src) {
+        if (error) {
+          console.log(error);
+        }
+        alert("hello World!!" + src);
+      }
+      loadScript(
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+        function goodmorning(error, src) {
+          if (error) {
+            console.log(error);
+          }
+          alert("hello World!!" + src);
+        }
+      );
+       
+      // here callback hell or pyramid of doom will happend 
+
+      // because we want to add some take further action after loading script then we pass it to the loadscript function and then this process is diffcult to read 
+      // readibility is important 
+      
+    </script>
+  </body>
+</html>
