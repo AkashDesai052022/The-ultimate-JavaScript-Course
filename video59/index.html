@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async/Await in JS</title>
+  </head>
+  <body>
+    <script>
+      async function harry() {
+        let delhiWeather = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("27 Deg");
+          }, 2000);
+        });
+        let bangloreWeather = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("21 Deg");
+          }, 5000);
+        });
+        console.log("Fecthing delhi weather please wait...");
+        let delhiW = await delhiWeather;
+        console.log("fecthed Delhi weather is : " + delhiW);
+        console.log("Fecthing banglore weather please wait...");
+        let bangloreW = await bangloreWeather;
+        console.log("fecthed banglore weather is : " + bangloreW);
+        return [delhiW, bangloreW];
+      }
+
+      // const cherry = ()=>{console.log("Hey I am cherry and I am not waiting...");}  // this  function is immediately invoked and not wating for harry
+      const cherry = async () => {
+        console.log("Hey I am cherry and I am  waiting... for harry");
+      };
+
+      const main = async () => {
+        console.log("welcome to weahter control room");
+        let a = await harry();
+        let b = await cherry();
+        // a.then((value) => {
+        //   console.log(value);
+        // });
+        // console.log(a);   // this gives me result of promise but .then() gives the value of promise
+      };
+      main();
+
+      // async function num(){
+      //     return 5;
+      // }
+      // num().then((x)=>{console.log(x);})
+    </script>
+  </body>
+</html>
