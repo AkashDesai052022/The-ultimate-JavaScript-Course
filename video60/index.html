@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling : try and catch</title>
+</head>
+<body>
+    <script>
+        setTimeout(() => {
+            console.log("Hacking wifi... Please wait...");
+        }, 1000);
+        setTimeout(() => {
+            console.log("Fetching username and password... please wait...");
+
+            // this is error and this is handle with try catch
+            try{
+                console.log(rahul);  // here have error but below script is still running
+            }
+            catch(err){
+                console.log("balle balle");
+            }
+
+            // try catch is not funcationable on scheduled code
+            // for eg. 
+            try{
+                setTimeout(()=>{
+                    console.log(rahul);
+                }, 100)
+            } catch(err){
+                console.log(err);
+            } 
+            // above code is not handle with try catch
+        }, 2000);
+        setTimeout(() => {
+            console.log("Hacking Rahul's facebook id ... please wait...");
+        }, 3000);
+        setTimeout(() => {
+            console.log("Username and password of Rahul(+919326501533) is fetched...");
+        }, 4000);
+    </script>
+</body>
+</html>
