@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Finally Clause</title>
+</head>
+<body>
+    <script>
+       const f = ()=>{
+        try{
+        let a = 9;
+        console.log(program);  
+        console.log("program run successfully");
+       } 
+       catch(error){
+        console.log("this is an error");  
+        console.log(p);  // but here also an error 
+       }finally{
+        console.log(" I am good boy");
+       }
+       }
+       f()
+       // here hey is not print in console .. here function f has an error that's why
+       console.log("Hey");
+    </script>
+</body>
+</html>
