@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies in JS</title>
+</head>
+<body>
+    <script>
+        document.cookie = "name=harry"
+        document.cookie = "name2=harry2"
+        let key = prompt("Enter your key")
+        let value = prompt("Enter you value")
+        document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+        console.log(document.cookie);
+
+        // encodeURIComponent
+        // decodeURIComponent
+
+        // cookie options = "user = john; path= /notes; expires= tue, 29 March 2025 03:18:22 GMT"
+        // name=value pair size should not exceed limit of 4KB
+        // total number of cookies per domain is limited and depend on browser 
+        // on chrome 180 per domain  
+    </script>
+</body>
+</html>
