@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypes and __proto__ in JS</title>
+</head>
+<body>
+    <script>
+        let a = {
+            name1 : "akash",
+            language: "JavaScript"
+        }
+
+        let p = {
+            run: ()=>{
+                alert("run")
+            }
+        }
+
+        p.__proto__ = {
+            name: "jackie"
+        }
+        a.__proto__ = p  // here we can set prototype of a object.
+        a.run()
+        console.log(a);
+        console.log(a.name);
+    </script>
+</body>
+</html>
