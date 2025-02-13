@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes and Objects In JS</title>
+  </head>
+  <body>
+    <script>
+      class RailwayForm {
+        submit() {
+          alert(this.name + " : form is Submitted with train Number : " + this.trainno );
+        }
+        cancel() {
+          alert(this.name + " : form is cancelled with train Number : " + this.trainno);
+        }
+        fill(givenName, trainno) {
+          this.name = givenName;
+          this.trainno = trainno;
+        }
+      }
+      let harry = new RailwayForm();
+      let rohan1 = new RailwayForm();
+      let rohan2 = new RailwayForm();
+
+      harry.fill("harry", 12345);
+      rohan1.fill("rohan", 98765);
+      rohan2.fill("rohan", 98765);
+
+      rohan1.submit();
+      rohan2.cancel();
+      harry.cancel();
+    </script>
+  </body>
+</html>
