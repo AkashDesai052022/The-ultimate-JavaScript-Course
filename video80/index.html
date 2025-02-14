@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor Overriding</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            // here we add constructor
+            constructor(name){
+                console.log(`${name} - Employee's constructor is here`);
+                this.name = name
+            }
+            login(name){
+                console.log(`${name} is logged in`);
+            }
+            logout(name){
+                console.log(`${name} is logged out`);
+            }
+            requestLeaves(leaves, name){
+                console.log(`${leaves} applied by ${name}`);
+            }
+        }
+class Programmer extends Employee{
+    // constructor(){  
+    //     super()
+    // } if there is no constructor in child class then JS engine automatically created one
+
+    constructor(name){
+        // this.name = name;
+        // and if we create a constructor in child class then use super keyword before this keyword.
+        super()
+        console.log("this is newly added constructor");
+    }
+    requestCoffee(x){
+        console.log(`Employee is requested for ${x}`);
+    }
+    requestLeaves(leaves){
+        super.requestLeaves(4, "desai")  // here I can use requestleaves method in programmer class using super keyword
+        console.log("one extra leave is granted.");
+        // console.log(`Employee is requested ${leaves + 1} (one extra)`);
+    }
+}
+
+        let harry = new Employee("akash")
+        let p = new Programmer('harry')
+        // harry.login("harry")
+        // harry.logout('harry')
+        // harry.requestLeaves(4, "harry")
+        // p.requestLeaves(3)
+        
+
+    </script>
+</body>
+</html>
