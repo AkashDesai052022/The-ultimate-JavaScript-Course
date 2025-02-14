@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      //     class RailwayForm {
+      //         constructor(givenName, trainno) {
+      //             console.log("Constructor called with " + givenName + " " + trainno);
+      //       this.name = givenName;
+      //       this.trainno = trainno;
+      //     }
+      //     submit() {
+      //       alert(this.name + " : form is Submitted with train Number : " + this.trainno );
+      //     }
+      //     cancel() {
+      //       alert(this.name + " : form is cancelled with train Number : " + this.trainno);
+      //     }
+      //   }
+      //   let harry = new RailwayForm( "harry", 1452544);
+      //   let rohan1 = new RailwayForm( "rohan", 98765);
+      //   let rohan2 = new RailwayForm("rohan", 98765);
+
+      // //   harry.fill("harry", 12345);
+      // //   rohan1.fill("rohan", 98765);
+      // //   rohan2.fill("rohan", 98765);
+
+      // harry.cancel();
+      //   rohan1.submit();
+      //   rohan2.cancel();
+    </script>
+
+    <script>
+      class RailwayForm {
+        constructor(givenName, trainno, address) {
+          console.log("Constructor called with " + givenName + " " + trainno + " " + address);
+          this.name = givenName;
+          this.trainno = trainno;
+          this.address = address;
+        }
+        preview() {
+          alert(
+            this.name +
+              " : form is for train Number : " +
+              this.trainno +
+              " and your address is " +
+              this.address
+          );
+        }
+        submit() {
+          alert(
+            this.name +
+              " : form is Submitted with train Number : " +
+              this.trainno
+          );
+        }
+        cancel() {
+          alert(
+            this.name +
+              " : form is cancelled with train Number : " +
+              this.trainno
+          );
+        }
+      }
+
+      let harryFrom = new RailwayForm(
+        "harry",
+        143,
+        "koparkhairane, navi Mumbai- 400709"
+      );
+      harryFrom.preview();
+      harryFrom.submit();
+      harryFrom.cancel();
+    </script>
+  </body>
+</html>
