@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overriding</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            login(name){
+                console.log(`${name} is logged in`);
+            }
+            logout(name){
+                console.log(`${name} is logged out`);
+            }
+            requestLeaves(leaves, name){
+                console.log(`${leaves} applied by ${name}`);
+            }
+        }
+class Programmer extends Employee{
+    requestCoffee(x){
+        console.log(`Employee is requested for ${x}`);
+    }
+    requestLeaves(leaves){
+        super.requestLeaves(4, "desai")  // here I can use requestleaves method in programmer class using super keyword
+        console.log("one extra leave is granted.");
+        // console.log(`Employee is requested ${leaves + 1} (one extra)`);
+    }
+}
+
+        let harry = new Employee()
+        let p = new Programmer()
+        harry.login("harry")
+        harry.logout('harry')
+        harry.requestLeaves(4, "harry")
+        p.requestLeaves(3)
+    </script>
+</body>
+</html>
