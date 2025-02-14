@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance & extends keywords in JavaScript</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(name, color){
+                this.name = name;
+                this.color = color
+            }
+            run(){
+                console.log(this.name + " is running");
+            }
+            shout(){
+                console.log(this.name + " is shouting");
+            }
+        }
+        // here we making another class name as Monkey with animal and also eat property
+
+        class Monkey extends Animal{
+        //     constructor(name, color){
+        //         this.name = name;
+        //         this.color = color
+        //     }
+        //     run(){
+        //         console.log(this.name + " is running");
+        //     }
+        //     shout(){
+        //         console.log(this.name + " is shouting");
+        //     }
+            eatBanana(){
+                console.log(this.name + " is eating banana");
+            }
+            hide(){
+                console.log(`${this.name} is hiding.`);
+            }
+        }
+ 
+        let a = new Animal("rabbit", "white")
+        let m = new Monkey("Chimpu", "orange")
+
+        a.run()
+        a.shout()
+        m.shout()
+        m.run()
+        // a.hide()  // this is not allowed 
+        m.hide()
+    </script>
+</body>
+</html>
