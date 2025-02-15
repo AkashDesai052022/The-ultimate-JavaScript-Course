@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static methods in JS</title>
+</head>
+<body>
+        <script>
+
+            // I can add this static method at three spots
+            class Animal{
+                constructor(name){
+                    this.name = Animal.capitalize(name) // here
+                }
+                walk(){
+                    console.log('animal ' + /*here*/(this.name) + ' is walking');
+                }
+                static capitalize(name){
+                    return name.charAt(0).toUpperCase() + name.substr(1, name.length)
+                }
+            }
+            // let m = new Animal("jack")
+            let m = new Animal(Animal.capitalize("jack"))  // this is also works
+            m.walk()
+        </script>
+</body>
+</html>
